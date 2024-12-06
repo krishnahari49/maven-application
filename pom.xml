@@ -95,13 +95,13 @@
 	<distributionManagement>
 	
 	    <repository>
-	      <id>nexus</id>
+	      <id>saha</id>
 	      <name>Mithun Technologies Releases Nexus Repository</name>
 	      <url>http://172.22.42.73:8081/saha/repository/swiggy-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
-	      <id>nexus</id>
+	      <id>saha</id>
 	      <name>Mithun Technologies Snapshot Nexus Repository </name>
 	      <url>http://172.22.42.73:8081/saha/repository/swiggy-snapshot/</url>
 	    </snapshotRepository>
