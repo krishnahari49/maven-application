@@ -96,14 +96,14 @@
 	
 	    <repository>
 	      <id>saha</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://172.22.42.73:8081/saha/repository/swiggy-release/</url>
+	      <name>SAHA release repo</name>
+	      <url>http://172.28.68.43:8081/saha/repository/swiggy-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>saha</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://172.22.42.73:8081/saha/repository/swiggy-snapshot/</url>
+	      <name>SAHA snapshot repo</name>
+	      <url>http://172.28.68.43:8081/saha/repository/swiggy-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
