@@ -11,4 +11,7 @@ sh "${mavenHome}/bin/mvn clean package"
 stage('SonarBuild'){
 sh "${mavenHome}/bin/mvn sonar:sonar"
 }
+stage('deployToNexus'){
+sh "${mavenHome}/bin/mvn deploy"
+}
 }
