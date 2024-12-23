@@ -14,4 +14,7 @@ sh "${mavenHome}/bin/mvn sonar:sonar"
 stage('deployToNexus'){
 sh "${mavenHome}/bin/mvn deploy"
 }
+stage('Copyfiles'){
+sh "scp target/maven-application.war /opt/apache-tomcat-10.1.34/webapps/"
+}
 }
