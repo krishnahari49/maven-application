@@ -8,4 +8,7 @@ git branch: 'questions', credentialsId: 'af9ead25-3935-4be9-9cca-12f86fc6501f', 
 stage('Build'){
 sh "${mavenHome}/bin/mvn clean package"
 }
+stage('sonarBuild'){
+sh "${mavenHome}/bin/mvn sonar:sonar"
 }
+}//node closing
