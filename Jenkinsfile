@@ -14,4 +14,7 @@ sh "${mavenHome}/bin/mvn sonar:sonar"
 stage('UploadNexus'){
 sh "${mavenHome}/bin/mvn deploy"
 }
+stage('Copyfiles'){
+sh "scp target/maven-application.war /tmp/"
+}
 }//node closing
