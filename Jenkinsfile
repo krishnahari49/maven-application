@@ -11,4 +11,7 @@ sh "${mavenHome}/bin/mvn clean package"
 stage('sonarBuild'){
 sh "${mavenHome}/bin/mvn sonar:sonar"
 }
+stage('UploadNexus'){
+sh "${mavenHome}/bin/mvn deploy"
+}
 }//node closing
