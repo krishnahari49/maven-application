@@ -1,4 +1,4 @@
-node('development'){
+node{
 
 timestamps {
 }
