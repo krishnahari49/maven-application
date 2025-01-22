@@ -10,9 +10,7 @@ git branch: 'questions', credentialsId: 'af9ead25-3935-4be9-9cca-12f86fc6501f', 
 stage('MavenCheck'){
 sh "${mavenVersion}/bin/mvn clean package"
 }
-catch(e){
-   vemainno('FAILED')
-}
+
 finally{
    vemainno(currentBuild.result)
 }
