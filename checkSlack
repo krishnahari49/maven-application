@@ -1,0 +1,20 @@
+@Library('slackalerts') _
+pipeline{
+agents any
+
+stages{
+stage('Gitcheck'){
+steps{
+git branch: 'development', credentialsId: 'af9ead25-3935-4be9-9cca-12f86fc6501f', url: 'https://github.com/krishnahari49/maven-application.git'
+}
+}
+}//stages closing
+post{
+success{
+slackAlerts('SUCCESSFUL')
+}
+failure{
+slackAlerts('FAILURE')
+}
+}//post closing
+}//pipeline closing
