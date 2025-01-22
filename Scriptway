@@ -1,23 +1,30 @@
 @Library('slackalerts') _
 
 pipeline{
+	agent any
 
-agent any
-
+tools{
+	maven "maven3.9.9"
+}
 stages{
-stage('GitCheck'){
-steps{
-git branch: 'development', credentialsId: 'af9ead25-3935-4be9-9cca-12f86fc6501f', url: 'https://github.com/krishnahari49/maven-application.git'
+	stage('CheckOut'){
+	steps{
+	    slackAlerts('STARTED')
+	git branch: 'development', credentialsId: 'af9ead25-3935-4be9-9cca-12f86fc6501f', url: 'https://github.com/krishnahari49/maven-application.git'
+	}
+	}
+	stage('Build'){
+	steps{
+	sh "mvn clean package"
+	}
+	}
 }
-}
-
-}//stages closing
 post{
-success{
-vemainno('SUCCESSFUL')
+	success{
+	slackAlerts('SUCCESSFUL')
+	}
+	failure{
+	slackAlerts('FAILURE')
+	}
 }
-failure{
-vemainno('FAILURE')
 }
-}//post closing
-}//pipeline closing
