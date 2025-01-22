@@ -1,4 +1,4 @@
-@Library('slackAlerts') _
+@Library('slackalerts') _
 
 pipeline{
 
