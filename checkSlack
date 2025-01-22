@@ -1,6 +1,6 @@
 @Library('slackalerts') _
 pipeline{
-agents any
+agent any
 
 stages{
 stage('Gitcheck'){
