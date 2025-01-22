@@ -1,3 +1,5 @@
+@Library('slackAlerts') _
+
 pipeline{
 
 agent any
@@ -10,4 +12,12 @@ git branch: 'development', credentialsId: 'af9ead25-3935-4be9-9cca-12f86fc6501f'
 }
 
 }//stages closing
+post{
+success{
+vemainno('SUCCESSFUL')
+}
+failure{
+vemainno('FAILURE')
+}
+}//post closing
 }//pipeline closing
