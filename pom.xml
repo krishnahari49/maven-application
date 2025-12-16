@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>saha</id>
 	      <name>SAHA release repo</name>
-	      <url>http://172.28.68.43:8081/saha/repository/swiggy-release/</url>
+	      <url>http://172.28.68.43:8081/repository/wallmart-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>saha</id>
 	      <name>SAHA snapshot repo</name>
-	      <url>http://172.28.68.43:8081/saha/repository/swiggy-snapshot/</url>
+	      <url>http://172.28.68.43:8081/repository/wallmart-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
