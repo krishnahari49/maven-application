@@ -72,4 +72,4 @@ def sendslacknotifications(String buildStatus = 'STARTED') {
   slackSend (color: colorCode, message: summary, channel: "#walmart")
 }
 
-
+//New line added
