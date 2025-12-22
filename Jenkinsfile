@@ -19,4 +19,8 @@ stage('NexusUpload'){
 sh "${MavenVersion}/bin/mvn deploy"
 }
 
+stage('UploadTomcat'){
+sh "scp target/maven-application.war /opt/apache-tomcat-10.1.49/webapps/maven-application.war"
+}
+
 }
