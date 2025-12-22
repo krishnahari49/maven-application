@@ -10,4 +10,8 @@ stage('Build'){
 sh "${MavenVersion}/bin/mvn clean package"
 }
 
+stage('SonarWay'){
+sh "${MavenVersion}/bin/mvn sonar:sonar"
+}
+
 }
