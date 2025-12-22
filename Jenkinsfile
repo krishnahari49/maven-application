@@ -14,4 +14,8 @@ stage('SonarWay'){
 sh "${MavenVersion}/bin/mvn sonar:sonar"
 }
 
+stage('NexusUpload'){
+sh "${MavenVersion}/bin/mvn deploy"
+}
+
 }
