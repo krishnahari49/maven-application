@@ -1,3 +1,4 @@
+
 node{
 
 def MavenVersion = tool name: "maven3.9.12"
@@ -16,5 +17,9 @@ sh "${MavenVersion}/bin/mvn sonar:sonar"
 
 stage('NexusUpload'){
 sh "${MavenVersion}/bin/mvn deploy"
+}
+
+stage('TomcatCopy'){
+sh "scp target/sample.war /opt/apache-tomcat-10.1.49/webapps/sample.war"
 }
 }
