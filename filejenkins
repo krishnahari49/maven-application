@@ -1,12 +1,7 @@
 node{
 
-def MavenVersion = tool name: "maven3.9.12"
-properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '3'))])
-
-stage('GitCode'){
-git branch: 'development', url: 'https://github.com/krishnahari49/maven-application.git'
+stage('Git'){
+git branch: 'stage', url: 'https://github.com/krishnahari49/maven-application.git'
 }
 
-stage('Build'){
-sh "${MavenVersion}/bin/mvn clean package"
 }
