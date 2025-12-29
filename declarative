@@ -1,12 +1,21 @@
 pipeline{
 
 agent any
+tools{
+Maven "maven3.9.12"
+}
 
 stages{
 
 stage('GitBuild'){
 steps{
 git branch: 'qa', url: 'https://github.com/krishnahari49/maven-application.git'
+}
+}
+
+stage('Maven'){
+steps{
+sh "mvn clean package"
 }
 }
 }//stages closing
