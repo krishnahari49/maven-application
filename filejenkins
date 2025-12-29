@@ -10,4 +10,11 @@ stage('MavenBuild'){
 sh "${MavenVersion}/bin/mvn clean package"
 }
 
+stage('SonarUpload'){
+sh "${MavenVersion}/bin/mvn sonar:sonar"
+}
+
+stage('NexusUpload'){
+sh "${MavenVersion}/bin/mvn deploy"
+}
 }
